@@ -1,0 +1,13 @@
+{
+  "players": [
+    { "id":1, "name": "Player 1", "country": "USA" },
+    { "id":2, "name": "Player 2", "country": "USA" },
+    { "id":3, "name": "Player 3", "country": "USA" },
+    { "id":4, "name": "Player 4", "country": "USA" }
+  ],
+  "tournaments": [
+    { "id": 1, "name":"European Open", "start_date": "2022-07-18", "end_date": "2022-07-20" },
+    { "id": 2, "name":"German Open", "start_date": "2022-07-24", "end_date": "2022-07-26" },
+    { "id": 3, "name":"Masters", "start_date": "2022-07-01", "end_date": "2022-07-10" }
+  ]
+}
