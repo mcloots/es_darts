@@ -4,7 +4,7 @@
   "description": "Learning ES6 by making a darts application",
   "main": "index.html",
   "scripts": {
-    "start": "start browser-sync start --server --files 'index.html,**/*.html,**/*.js,**/*.css' && start json-server --watch json-server-local\\db.json",
+    "start": "browser-sync start --server --files 'index.html,**/*.html,**/*.js,**/*.css'",
     "sync": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
