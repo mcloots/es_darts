@@ -1,10 +1,12 @@
-class MyMenu extends HTMLElement {
-    constructor() {
-      super();
-    }
+import { Helpers } from "../helpers/helpers.js";
 
-    connectedCallback() {
-        this.innerHTML = `
+class MyMenu extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Darts</a>
@@ -17,20 +19,33 @@ class MyMenu extends HTMLElement {
               <li class="nav-item">
                 <a class="nav-link active" href="index.html">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="play.html">Play</a>
-              </li>
               </ul>
               <ul class="navbar-nav ms-auto w-100 justify-content-end">
-              <li class="nav-item">
+              <li class="nav-item" id="login">
                 <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item" id="logout">
+                <a class="nav-link" href="#">Logout</a>
               </li>
             </ul>
           </div>
         </div>
         </nav>
         `;
-      }
   }
+}
 
-  customElements.define('menu-component', MyMenu);
+customElements.define("menu-component", MyMenu);
+
+document.getElementById("logout").addEventListener("click", () => {
+  Helpers.clearToken();
+  window.location.href = "index.html";
+});
+
+if (Helpers.isLoggedIn()) {
+  document.getElementById("login").style.display = "none";
+  document.getElementById("logout").style.display = "block";
+} else {
+  document.getElementById("login").style.display = "block";
+  document.getElementById("logout").style.display = "none";
+}

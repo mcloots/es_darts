@@ -14,4 +14,8 @@ export class Helpers {
   static clearToken() {
     localStorage.removeItem("token");
   }
+
+  static isLoggedIn() {
+    return localStorage.getItem("token") !== null;
+  }
 }

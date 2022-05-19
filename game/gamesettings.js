@@ -1,4 +1,4 @@
-import { Helpers } from "../helpers/helpers.js";
+import { Helpers } from '../helpers/helpers.js';
 
 document.addEventListener("readystatechange", (event) => {
   switch (event.target.readyState) {
@@ -11,13 +11,8 @@ document.addEventListener("readystatechange", (event) => {
   }
 });
 
+
 // Arrow function
 const initApp = () => {
-  hideLoginAlert();
-};
-
-const hideLoginAlert = () => {
-  if (Helpers.isLoggedIn()) {
-    document.getElementById("loginAlert").style.display = "none";
-  }
+   console.log("settings");
 };
